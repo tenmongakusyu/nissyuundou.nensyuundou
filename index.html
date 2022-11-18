@@ -91,8 +91,8 @@
 
       function resize()
       {
-        canvas.style.height = document.documentElement.clientHeight + "px";
-        canvas.style.width = ((document.documentElement.clientHeight / 16 )* 9) + "px";
+        canvas.style.width = document.documentElement.clientHeight + "px";
+        canvas.style.height = ((document.documentElement.clientHeight / 16 )* 9) + "px";
         if (((document.documentElement.clientHeight / 16 )* 9) > document.documentElement.clientWidth)
         {
           canvas.style.width = document.documentElement.clientWidth + "px";
