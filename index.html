@@ -6,6 +6,9 @@
     <title>日周運動 年周運動</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    //
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    //
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -87,23 +90,24 @@
 //      }
       
     //  
-      var canvas = document.getElementById("unity-canvas");
+      
+/* Unityの画面をウィンドウ全体に拡げる */
+#unity-container, #unity-canvas {
+    width: 100%;
+    height: 100%;
+}
 
-      function resize()
-      {
-        canvas.style.width = document.documentElement.clientHeight + "px";
-        canvas.style.height = ((document.documentElement.clientHeight / 16 )* 9) + "px";
-        if (((document.documentElement.clientHeight / 16 )* 9) > document.documentElement.clientWidth)
-        {
-          canvas.style.height = document.documentElement.clientWidth + "px";
-          canvas.style.width = ((document.documentElement.clientWidth / 9 )* 16) + "px";
-        }
-      }
+/* フッターのロゴ等を隠す */
+#unity-footer {
+    display: none;
+}
 
-      resize();
-
-      window.onresize = resize;
-     //
+/* 縦スクロールバーを隠す */
+body {
+    overflow: hidden;
+}
+      
+      //
       
       
       loadingBar.style.display = "block";
