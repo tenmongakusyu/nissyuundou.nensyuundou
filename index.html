@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=1400 height=640></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/webgl8.loader.js";
+      var loaderUrl = buildUrl + "/webgl2.1.loader.js";
       var config = {
-        dataUrl: buildUrl + "/webgl8.data",
-        frameworkUrl: buildUrl + "/webgl8.framework.js",
-        codeUrl: buildUrl + "/webgl8.wasm",
+        dataUrl: buildUrl + "/webgl2.1.data",
+        frameworkUrl: buildUrl + "/webgl2.1.framework.js",
+        codeUrl: buildUrl + "/webgl2.1.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "My project",
@@ -82,8 +82,8 @@
 //        config.devicePixelRatio = 1;
         // unityShowBanner('WebGL builds are not supported on mobile devices.');
 //      } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "540px";
+        canvas.style.width = "1400px";
+        canvas.style.height = "640px";
 //      }
       
     //  
